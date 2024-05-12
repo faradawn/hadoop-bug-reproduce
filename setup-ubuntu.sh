@@ -2,10 +2,9 @@
 sudo apt update
 sudo apt install -y openjdk-8-jdk
 
-# Get hadoop 
-cd ~
-git clone https://github.com/faradawn/hadoop-bug-reproduce.git
-cp ~/hadoop-bug-reproduce/hadoop-3.1.0.tar.gz
+# Get hadoop https://github.com/faradawn/hadoop-bug-reproduce.git
+cp hadoop-3.1.0.tar.gz /home/cc
+cd /home/cc
 tar -xzf hadoop-3.1.0.tar.gz
 mv hadoop-3.1.0.tar.gz hadoop
 
