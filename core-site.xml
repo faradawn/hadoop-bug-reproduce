@@ -18,12 +18,6 @@
 <configuration>
     <property>
         <name>fs.defaultFS</name>
-        <!-- for worker -->
-        <!-- <value>hdfs://192.5.86.247:9000</value> -->
-        <!-- for master -->
-        <!-- <value>hdfs://0.0.0.0:9000</value> -->
-
-        <!-- for both -->
-        <value>hdfs://faradawn-uchicago-edu-hdfs14859-node-2:9000</value>
+        <value>hdfs://hdfs14859-node-0:9000</value>
     </property>
 </configuration>
