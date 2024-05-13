@@ -32,8 +32,18 @@ sudo chmod 777 /home/cc/hadoop
 sudo echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' >> /home/cc/hadoop/etc/hadoop/hadoop-env.sh
 . ~/.bashrc
 
-echo 'Hadoop installation complete!'
+# Get the config files
+wget https://github.com/faradawn/hadoop-bug-reproduce/raw/master/core-site.xml
+wget https://github.com/faradawn/hadoop-bug-reproduce/raw/master/hdfs-site.xml
+wget https://github.com/faradawn/hadoop-bug-reproduce/raw/master/yarn-site.xml
+wget https://github.com/faradawn/hadoop-bug-reproduce/raw/master/mapred-site.xml
 
-sudo mv id_rsa /home/cc/.ssh/id_rsa
-sudo chmod 600 /home/cc/.ssh/id_rsa
-echo 'moved ssh key'
+# Place into folders
+cp mapred-site.xml /home/cc/hadoop/etc/hadoop/mapred-site.xml
+cp yarn-site.xml /home/cc/hadoop/etc/hadoop/yarn-site.xml
+cp hdfs-site.xml /home/cc/hadoop/etc/hadoop/hdfs-site.xml
+cp core-site.xml /home/cc/hadoop/etc/hadoop/core-site.xml
+
+echo 'Hadoop installation and config complete! (for worker)'
+
+
